@@ -15,7 +15,7 @@ class Halfling extends Race {
     this.dexterity = dexterity;
   }
   
-  static createdRacesInstances(): string | number {
+  static createdRacesInstances(): number {
     this.instancies += 1;
     return this.instancies;
   }

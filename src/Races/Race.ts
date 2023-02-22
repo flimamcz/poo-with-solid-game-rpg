@@ -6,7 +6,7 @@ abstract class Race {
     this.dexterity = _dexterity;
   }
 
-  static createdRacesInstances(): number | string {
+  static createdRacesInstances(): number {
     throw new Error('Not implemented');
   }
 
