@@ -1,13 +1,38 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
+# Fl and Dragons
+Este projeto tem como objetivo utilizar a arquitetura SOLID juntamente com os princípios da POO para desenvolver um jogo no estilo Dungeons & Dragons de interpretação de papéis (role play), também conhecido como RPG.
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+# Tecnologias utilizadas
+ - <a href="https://www.docker.com/" target="_blank"> Docker</a> - Para a conteinerização da aplicação;
+ - <a href="https://medium.com/desenvolvendo-com-paixao/o-que-%C3%A9-solid-o-guia-completo-para-voc%C3%AA-entender-os-5-princ%C3%ADpios-da-poo-2b937b3fc530" target="_blank"> SOLID</a> - Para arquitetura e organização do código realizado em paradigma POO;
+ - <a href="https://nodejs.org/api/" target="_blank"> NodeJS</a> - Para o desenvolvimento como um todo.
+ - <a href="https://www.typescriptlang.org" target="_blank"> TypeScript</a> - Para tipagem da linguagem.;
+# Como rodar o projeto
+ 1 - Clone o repositório:
+git clone https://github.com/flimamcz/poo-with-solid-game-rpg
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+ 2 - Instale as dependências:
+npm install
+
+ 3 - Inicie o Docker Compose:
+docker-compose up -d
+
+ 4 - Abra uma linha de comando dentro do container:
+docker exec -it trybers_and_dragon bash
+
+ 5 - Instale as dependências dentro do contâiner:
+npm install
+
+# Instanciando Personagens
+const character = new Character('nome genérico');
+ ##### Eleva o level do character
+ - character.levelUp;
+ #### Realiza o attack no oponente destinado como parâmetro.
+ - character.attack(OtherCharacterOrMonster);
+
+# Instanciando Monstros
+Monstros podem ser criados. Em especial, os monstros é derivadamente mais simples que os characters, possuindo somente os atributos de attack e receiveDamage.
+
+#### Cria o monstro
+const monster = new Monster();
+#### Monstro ataca o character passado via parâmetro
+monster.attack(character);
