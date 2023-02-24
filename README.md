@@ -26,13 +26,26 @@ npm install
 const character = new Character('nome genérico');
  ##### Eleva o level do character
  - character.levelUp;
- #### Realiza o attack no oponente destinado como parâmetro.
+ ##### Realiza o attack no oponente destinado como parâmetro.
  - character.attack(OtherCharacterOrMonster);
 
 # Instanciando Monstros
 Monstros podem ser criados. Em especial, os monstros é derivadamente mais simples que os characters, possuindo somente os atributos de attack e receiveDamage.
 
-#### Cria o monstro
+##### Cria o monstro
 const monster = new Monster();
-#### Monstro ataca o character passado via parâmetro
+##### Monstro ataca o character passado via parâmetro
 monster.attack(character);
+
+# Batalhas no formato PVP
+Batalha PVP (Player contra Player)
+
+Com dois personagens do tipo Character criados, é possível criar uma batalha entre os dois. Para saber o vencedor, basta utilizar o método fight. Se o primeiro personagem adicionado ganhar, será retornado 1, se o segundo personagem ganhar, será retornado -1.
+
+Obs: você pode aumentar o nível dos personagens antes da batalha usando o método levelUp:
+
+##### Cria characters para batalha.
+- const batalhaPvp = new PVP(personagem1, personagem2);
+##### Retorna resultado da batalha
+- console.log(batalhaPvp.fight()); // 1 ou -1
+
